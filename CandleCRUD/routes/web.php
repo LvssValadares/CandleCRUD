@@ -12,17 +12,19 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+use App\Http\Controllers\CandleController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/candleRegister', function () {
-    return view('candleRegister');
-});
+Route::get('/', [CandleController::class, 'index']);
+Route::get('/candles/create', [CandleController::class, 'create']);
+Route::get('/candles/delete', [CandleController::class, 'delete']);
+Route::get('/candles/list', [CandleController::class, 'list']);
 
 Route::get('/candles', function () {
     return view('candles');
+});
+
+Route::get('/candles/{id}', function ($id) {
+    return view('candle', ['id' => $id]);
 });
 
 Route::get('/candleDelete', function () {
