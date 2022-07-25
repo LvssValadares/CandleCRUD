@@ -7,10 +7,176 @@ h1 {
     color:#00a88a
 }
 
+h2 {
+    font-family:'Pacifico';
+    color:#540047
+}
+
 body{
+    min-height: 100vh;
+    padding-bottom: 100px;
+    position: relative;
     background-image: url("/img/pinkBackground.webp");
+}
+
+header{
+    background-color:#ffc8d2;
+    border-bottom:#a8008e ;
+}
+
+.row{
+    margin: 0;
+}
+
+.btn-primary{ 
+    background-color:#ff889d;
+    border: 3px solide #a8008e;
+}
+
+.btn-primary:hover{ 
+    background-color:#a8008e;
+    border: 3px solide #a8008e;
+}
+
+
+.container-fluid{
+    padding: 0;
 }
 
 #navbar img{
     width: 100px;
 }
+
+#navbar {
+    justify-content: space-between;
+    background-color: #ffc8d2;
+}
+
+#navbar a{
+    font-size: 30px;
+    color: #a8008e;
+}
+
+#navbar a:hover{
+    color: #540047;
+}
+
+#search-container{
+    background-image: url("../img/dimensionssearchbar.png");
+    background-size: cover;
+    background-position: center;
+    height: 350px;
+    padding: 50px;
+    text-align: center;
+}
+
+#search-container form{
+    width: 70%;
+    margin: 0 auto;
+}
+
+#candles-container {
+    padding: 50px;
+}
+
+#candles-container h2{
+    margin-bottom: 10px;
+}
+
+#candles-container h1{
+    text-align: center;
+    width: 700px; 
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+#candles-container .subtitles{
+    color: #a8008e;
+    margin-bottom: 30px;
+}
+
+#candles-container a{
+    color: #540047;
+}
+
+#cards-container{
+    display: flex;
+}
+
+#candles-container .card{
+    flex: 1 1 0;
+    max-width: 25%;
+    border-radius: 10px;
+    padding: 0;
+    margin: 5px;
+}
+
+#candles-container img{
+    max-height: 400px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card .card-qtd{
+    font-size: 15px;
+    color: #a8008e;
+}
+
+.card .card-qtd{
+    font-size: 15px;
+    color: #a8008e;
+}
+
+.card .card-name{
+    font-size: 20px;
+    color: #a8008e;
+}
+
+footer {
+    text-align: center;
+    background-color: #a8008e;
+    color: #ffc8d2;
+    padding: 30px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p{
+    margin-bottom: 0;
+}
+
+#candle-create-container{
+    padding: 30px;
+}
+
+#candle-create-container label{
+    font-weight: bold;
+}
+
+#candle-create-container input,
+#candle-create-container select,
+#candle-create-container textarea{
+    font-size: 15px;
+}
+
+#image-container,
+#info-container{
+    margin-top: 30px;
+}
+
+#image-container{
+    border-radius: 10px;
+}
+
+#info-container h1{
+    font-size: 36px;
+    font-weight: 900;
+}
+
+#info-container p{
+    margin: 0;
+    font-size: 14px;
+    display: flex;
+}
+

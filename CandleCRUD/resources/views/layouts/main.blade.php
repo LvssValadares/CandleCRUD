@@ -24,13 +24,13 @@
                     </a>
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a href="/candles/list" class="nav-link"> <h2> Velas </h2> </a>
+                            <a href="/candles/list" class="nav-link">Velas Disponíveis</a>
                         </li>
                         <li class="nav-item">
-                            <a href="/candles/create" class="nav-link"> <h2> Adicionar Vela </h2></a>
+                            <a href="/candles/create" class="nav-link">Adicionar Vela</a>
                         </li>
                         <li class="nav-item">
-                            <a href="/candles/delete" class="nav-link"> <h2> Remover Vela </h2></a>
+                            <a href="/candles/delete" class="nav-link">Remover Vela</a>
                         </li>
                     </ul> 
                 </div>
@@ -38,7 +38,7 @@
         </header>
         @yield('content')
         <footer>
-            <p>Dimensions &copy; 2022</p>
+            <p>Dimensions &copy 2022</p>
         </footer>
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

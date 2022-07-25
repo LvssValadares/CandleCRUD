@@ -18,15 +18,7 @@ Route::get('/', [CandleController::class, 'index']);
 Route::get('/candles/create', [CandleController::class, 'create']);
 Route::get('/candles/delete', [CandleController::class, 'delete']);
 Route::get('/candles/list', [CandleController::class, 'list']);
+Route::post('/candles', [CandleController::class, 'store']);
+Route::get('/candles/{id}', [CandleController::class, 'show']);
 
-Route::get('/candles', function () {
-    return view('candles');
-});
 
-Route::get('/candles/{id}', function ($id) {
-    return view('candle', ['id' => $id]);
-});
-
-Route::get('/candleDelete', function () {
-    return view('candleDelete');
-});
