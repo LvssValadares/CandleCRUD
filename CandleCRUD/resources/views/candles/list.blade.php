@@ -8,7 +8,7 @@
     <p class="subtitle"></p>
         @foreach($candles as $candle)
             <div class="card col-m-3">
-                <img src="/img/dimensionssearchbar.png" alt="{{ $candle->name }}">
+                <img src="/img/candles/{{ $candle->image }}" alt="{{ $candle->name }}">
                 <div class="card-body">
                     <p class="card-name">Nome: {{ $candle->name}}</p>
                     <p class="card-qtd">Em estoque: {{ $candle->qtd}}</p>
@@ -19,6 +19,12 @@
                 </div>
             </div>
         @endforeach
+        <br>
+        <br>
+        <br>
+        @if(count($candles) == 0)
+            <h1> Não a velas disponíveis </h1>
+        @endif
         <br>
         <br>
         <a href="/"> Voltar para página inicial</a>

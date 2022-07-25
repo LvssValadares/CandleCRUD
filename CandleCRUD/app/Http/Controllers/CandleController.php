@@ -8,6 +8,7 @@ use App\Models\Candle;
 class CandleController extends Controller
 {
     public function index(){
+
         return view('welcome');
     }
 
@@ -31,9 +32,18 @@ class CandleController extends Controller
         $candle->fragrance = $request->fragrance;
         $candle->description = $request->description;
 
+        if($request->hasFile('image') && $request->file('image')->isValid()){
+            $requestImage = $request->image;
+            $extension = $requestImage->extension();
+            $imageName = md5($requestImage->getClientOriginalName() .
+             strtotime("now")) . "." . $extension;
+            $request->image->move(public_path('img/candles'), $imageName);
+            $candle->image = $imageName;
+        }
+
         $candle->save();
 
-        return redirect('/');
+        return redirect('/')->with('msg','Vela Adicionada com Sucesso!');
     }
 
     public function show($id){
