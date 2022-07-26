@@ -8,16 +8,22 @@ use App\Models\Candle;
 class CandleController extends Controller
 {
     public function index(){
-
-        return view('welcome');
+        $search = request('search');
+        if($search){
+            $candles = Candle::where([['name','like','%'.$search.'%']])->get();
+        }else{
+            $candles = Candle::all();
+        }
+        return view('welcome',['candles' => $candles, 'search' => $search]);
     }
 
     public function create(){
         return view('candles.create');
     }
 
-    public function delete(){
-        return view('candles.delete');
+    public function edit(){
+        $candles = Candle::all();
+        return view('candles.edit', ['candles' => $candles]);
     }
 
     public function list(){
@@ -49,5 +55,10 @@ class CandleController extends Controller
     public function show($id){
         $candle = Candle::findOrFail($id);
         return view('candles.show', ['candle' => $candle]);
+    }
+
+    public function destroy($id){
+        Candle::findOrFail($id)->delete();
+        return redirect('/')->with('msg', 'Vela excluida com sucesso');
     }
 }

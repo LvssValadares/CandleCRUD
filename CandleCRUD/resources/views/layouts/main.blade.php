@@ -23,8 +23,10 @@
                 <a href="/" class="navbar-brand">
                     <img src="/img/logo.png" alt="Dimensions">
                 </a>
-                <ul class="navbar-nav">
+                <a href="/" class="navbar-brand">
                     <h1> Bem Vindo a Dimensions</h1>
+                </a>
+                <ul class="navbar-nav">
                     <li class="nav-item">
                         <a href="/candles/list" class="nav-link">Velas Disponíveis</a>
                     </li>
@@ -32,7 +34,7 @@
                         <a href="/candles/create" class="nav-link">Adicionar Vela</a>
                     </li>
                     <li class="nav-item">
-                        <a href="/candles/delete" class="nav-link">Remover Vela</a>
+                        <a href="/candles/edit" class="nav-link">Editar Vela</a>
                     </li>
                 </ul>
             </div>
@@ -42,7 +44,7 @@
         <div class="container-fluid">
             <div class="row">
                 @if(session('msg'))
-                    <p class="msg">{{ session('msg') }}</p>
+                <p class="msg">{{ session('msg') }}</p>
                 @endif
                 @yield('content')
             </div>

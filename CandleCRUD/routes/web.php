@@ -16,9 +16,11 @@ use App\Http\Controllers\CandleController;
 
 Route::get('/', [CandleController::class, 'index']);
 Route::get('/candles/create', [CandleController::class, 'create']);
-Route::get('/candles/delete', [CandleController::class, 'delete']);
+Route::get('/candles/edit', [CandleController::class, 'edit']);
 Route::get('/candles/list', [CandleController::class, 'list']);
 Route::post('/candles', [CandleController::class, 'store']);
 Route::get('/candles/{id}', [CandleController::class, 'show']);
+Route::delete('/candles/{id}', [CandleController::class, 'destroy']);
+
 
 
