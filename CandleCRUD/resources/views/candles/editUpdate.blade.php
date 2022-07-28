@@ -11,25 +11,24 @@
         @method('PUT')
         <div class="form-group">
             <label for="tittle">Nome da Vela:</label>
-            <input type="text" class="form-control" id="name" name="name" placeholder="Nome">
+            <input type="text" class="form-control" id="name" name="name" placeholder="Nome" value="{{ $candle->name }}">
         </div>
         <div class="form-group">
             <label for="tittle">Quantidade no estoque:</label>
-            <input type="number" class="form-control" id="qtd" name="qtd" placeholder="Quantidade">
+            <input type="number" class="form-control" id="qtd" name="qtd" placeholder="Quantidade" value="{{ $candle->qtd }}">
         </div>
         <div class="form-group">
             <label for="tittle">Fragância da vela:</label>
-            <input type="text" class="form-control" id="fragrance" name="fragrance" placeholder="Fragância">
+            <input type="text" class="form-control" id="fragrance" name="fragrance" placeholder="Fragância" value="{{ $candle->fragance }}">
         </div>
         <div class="form-group">
             <label for="tittle">Descrição da Vela:</label>
-            <input type="text" class="form-control" id="description" name="description" placeholder="Descrição">
+            <input type="text" class="form-control" id="description" name="description" placeholder="Descrição" value="{{ $candle->description }}">
         </div>
         <div class="form-group">
             <label for="image">Imagem da Vela:</label>
             <input type="file" id="image" name="image" class="from-control-file">
-            <img src="/img/candles/{{ $candle->image }}" alt="{{ $candle->name }}" class="img-preview"
-            placeholder="Nome da Vela" value="{{ $candle->name }}">
+            <img src="/img/candles/{{ $candle->image }}" alt="{{ $candle->name }}" class="img-preview" placeholder="Nome da Vela" value="{{ $candle->name }}">
         </div>
         <input type="submit" class="btn btn-primary" value="Adicionar Vela">
         <br>

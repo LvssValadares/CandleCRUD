@@ -66,5 +66,10 @@ class CandleController extends Controller
         $candle = Candle::findOrFail($id);
         return view('candles.editUpdate', ['candle' => $candle]);
     }
-    
+
+    public function update(Request $request){
+        Candle::findOrFail($request->id)->update($request->all());
+        return redirect('/candles/edit')->with('msg', 'Vela atualizada com sucesso');
+    }
+
 }

@@ -22,6 +22,7 @@ Route::post('/candles', [CandleController::class, 'store']);
 Route::get('/candles/{id}', [CandleController::class, 'show']);
 Route::delete('/candles/{id}', [CandleController::class, 'destroy']);
 Route::get('/candles/editUpdate/{id}', [CandleController::class, 'editUpdate']);
+Route::put('/candles/update/{id}', [CandleController::class, 'update']);
 
 
 
