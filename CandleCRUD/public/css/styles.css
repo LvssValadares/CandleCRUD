@@ -195,3 +195,8 @@ footer p{
     display: flex;
 }
 
+.img-preview{
+    width: 200px;
+    margin-top: 40px;
+}
+

@@ -14,7 +14,7 @@
             <p class="card-qtd">Em estoque: {{ $candle->qtd}}</p>
             <p class="card-fragance">Fragância: {{ $candle->fragrance}}</p>
             <p class="card-description">Descrição: {{ $candle->description}}</p>
-            <a href="#" class="btn btn-primary"><ion-icon name="create-outline"></ion-icon>Editar</a>
+            <a href="/candles/editUpdate/{{ $candle->id }}" class="btn btn-primary"><ion-icon name="create-outline"></ion-icon>Editar</a>
             <form action="/candles/{{ $candle->id }}" method="POST">
                 @csrf
                 @method('DELETE')

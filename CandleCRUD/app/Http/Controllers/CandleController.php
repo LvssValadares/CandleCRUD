@@ -61,4 +61,10 @@ class CandleController extends Controller
         Candle::findOrFail($id)->delete();
         return redirect('/')->with('msg', 'Vela excluida com sucesso');
     }
+
+    public function editUpdate($id){
+        $candle = Candle::findOrFail($id);
+        return view('candles.editUpdate', ['candle' => $candle]);
+    }
+    
 }
