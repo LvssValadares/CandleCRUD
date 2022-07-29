@@ -32,11 +32,7 @@ class CandleController extends Controller
     }
 
     public function store(Request $request){
-        $candle = new Candle;
-        $candle->name = $request->name;
-        $candle->qtd = $request->qtd;
-        $candle->fragrance = $request->fragrance;
-        $candle->description = $request->description;
+        $candle = Candle::create($request->all());
 
         if($request->hasFile('image') && $request->file('image')->isValid()){
             $requestImage = $request->image;
